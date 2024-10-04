@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4d8e4; /* Light pink background */
+            --text-color: #5c467e; /* Purple text */
+            --highlight-color: #3b2c4b; /* Dark purple for headings */
+            --border-radius: 8px; /* Border radius */
+            --padding: 20px; /* Padding */
+            --font-family: 'Arial', sans-serif; /* Font family */
+            --font-size: 1rem; /* Base font size */
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            font-weight: 700;
+            color: var(--highlight-color);
+            margin-bottom: 15px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: var(--padding);
+            background-color: var(--text-color);
+            color: #ffffff; /* White text */
+            border-radius: var(--border-radius);
+            margin-bottom: 40px; /* Margin to separate sections */
+        }
+
+        .mission-vision {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .mission, .vision {
+            flex: 1;
+            background-color: white;
+            color: var(--text-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            flex: 0 1 200px;
+            margin: 10px;
+            padding: var(--padding);
+            background-color: white;
+            color: var(--text-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .values-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .values {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .value {
+            flex: 0 1 150px;
+            margin: 10px;
+            padding: var(--padding);
+            background-color: white;
+            color: var(--text-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--highlight-color);
+        }
+
+        @media (max-width: 768px) {
+            .mission-vision, .team, .values {
+                flex-direction: column; /* Stack items on smaller screens */
+                align-items: center; /* Center items */
+            }
+
+            .mission, .vision, .team-member, .value {
+                margin: 10px 0; /* Margin between stacked items */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- About Section -->
+        <div class="about-section">
+            <h1>About Us</h1>
+            <p>We are a passionate team dedicated to providing the best services and products to our customers. Our mission is to enhance lives through quality, creativity, and excellence.</p>
+        </div>
+
+        <!-- Mission and Vision Section -->
+        <div class="mission-vision">
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>To provide exceptional services that create lasting value for our clients and communities.</p>
+            </div>
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p>To be a leading company known for innovation, quality, and customer satisfaction.</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Creative Director</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/100" alt="Team Member 3">
+                    <h3>Mike Johnson</h3>
+                    <p>Marketing Manager</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="values-section">
+            <h2>Our Values</h2>
+            <div class="values">
+                <div class="value">
+                    <h3>Integrity</h3>
+                    <p>We uphold the highest standards of integrity in all our actions.</p>
+                </div>
+                <div class="value">
+                    <h3>Excellence</h3>
+                    <p>We strive for excellence in everything we do.</p>
+                </div>
+                <div class="value">
+                    <h3>Innovation</h3>
+                    <p>We foster a culture of creativity and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Our Company. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

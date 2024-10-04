@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4d8e4; /* Light pink background color */
+            --purple-bg: #5c467e; /* Purple background for contact form */
+            --text-color: #ffffff; /* White text color */
+            --highlight-color: #3b2c4b; /* Darker purple for buttons */
+            --input-bg-color: #ffffff; /* White background for inputs */
+            --border-radius: 8px; /* Border radius */
+            --padding: 20px; /* Padding */
+            --font-family: 'Arial', sans-serif; /* Font family */
+            --font-size: 1rem; /* Base font size */
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px; /* Increased gap between boxes */
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+
+        .info-box {
+            background-color: var(--purple-bg);
+            color: var(--text-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            width: 400px; /* Fixed width for info box */
+            flex: 1; /* Makes the info box flexible */
+        }
+
+        .info-box h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .info-box p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .info-box .icon {
+            color: var(--highlight-color);
+            margin-right: 10px;
+        }
+
+        .form-box {
+            background-color: var(--highlight-color);
+            color: var(--text-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            flex: 1; /* Makes the form box flexible */
+            max-width: 400px; /* Fixed max width for the form */
+            display: flex; /* Use flexbox for form layout */
+            flex-direction: column; /* Column layout */
+            align-items: center; /* Center align items */
+            justify-content: center; /* Center align vertically */
+        }
+
+        .form-box h1 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center; /* Center align title */
+        }
+
+        .form-group {
+            width: 100%; /* Ensure full width */
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--input-bg-color);
+            border-radius: var(--border-radius);
+            margin: 0 0 10px 0;
+            font-size: var(--font-size);
+            background-color: var(--input-bg-color);
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--purple-bg); /* Focus border color */
+        }
+
+        textarea {
+            resize: none; /* Prevents resizing */
+        }
+
+        button {
+            padding: 12px 15px;
+            background-color: var(--purple-bg);
+            color: var(--text-color);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: var(--font-size);
+            transition: background-color 0.3s;
+            font-weight: bold;
+            width: 100%;
+            text-align: center; /* Center text in button */
+        }
+
+        button:hover {
+            background-color: var(--text-color);
+            color: var(--purple-bg);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .info-box, .form-box {
+                width: 100%;
+                max-width: 400px; /* Responsive width */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Contact Information -->
+        <div class="info-box">
+            <h2>JOIN OUR NEWSLETTER</h2>
+            <p>Nam ultricies ultricies nec tortor pulvinaresteras loremips est orem.</p>
+            <p>3045 10 Sunrize Avenue, 123-456-7890</p>
+            <p>Mon - Fri: 9:00 am - 8:00 pm</p>
+            <p>Sat - Sun: 9:00 am - 10 pm</p>
+            <p><i class="fas fa-envelope icon"></i> contacts@esbnyc.com</p>
+            <p>Follow us:</p>
+            <p>
+                <i class="fab fa-facebook icon"></i>
+                <i class="fab fa-twitter icon"></i>
+                <i class="fab fa-instagram icon"></i>
+            </p>
+            <p>&copy; 2021 Privacy Policy</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-box">
+            <h1>Contact Us</h1>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Enter your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Enter a valid email address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Enter your message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please fill in all fields.',
+                });
+                return;
+            }
+
+            // Simulate form submission
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank You!',
+                text: `Your message has been sent successfully, ${name}.`,
+            });
+
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
